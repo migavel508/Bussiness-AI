@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-const genAI = new GoogleGenerativeAI('AIzaSyBORnwVH81KUWR1oJ0UnmZNYNUxfut_jug');
+const genAI = new GoogleGenerativeAI('YOUR-API');
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 app.post('/api/generate', async (req, res) => {
